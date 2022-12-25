@@ -2,9 +2,10 @@
 const cars = ['Tesla', 'Mercedes', 'Honda']
 const [ randomCar ] = cars
 const [ ,otherRandomCar ] = cars
-//Predict the output
+//Predict the output = tesla mercedes
 console.log(randomCar)
 console.log(otherRandomCar)
+
 
 //PROBLEMA 2
 const employee = {
@@ -13,9 +14,10 @@ const employee = {
     company: 'Tesla'
 }
 const { name: otherName } = employee;
-//Predict the output
+//Predict the output = name ya fué reemplazado por othername, reference error
 console.log(name);
 console.log(otherName);
+
 
 //PROBLEMA 3
 const person = {
@@ -25,16 +27,32 @@ const person = {
 }
 const password = '12345';
 const { password: hashedPassword } = person;  
-//Predict the output
+//Predict the output 12345 undefined password no es una propiedad de person
 console.log(password);
 console.log(hashedPassword);
 
 
-//PROBLEMA 4
+//PROBLEMA 4 
+//1ro es first 2 - 3ro es second 5 - 8vo third es 2
 const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
 const [,first] = numbers;
 const [,,,second] = numbers;
 const [,,,,,,,,third] = numbers;
-//Predict the output
+//Predict the output false, true
 console.log(first == second);
 console.log(first == third);
+
+
+//PROBLEMA 5
+const lastTest = {
+    key: 'value',
+    secondKey: [1, 5, 1, 8, 3, 3]
+}
+const { key } = lastTest;
+const { secondKey } = lastTest;
+const [ ,willThisWork] = secondKey;
+//Predict the output value, 1 5 1 8 3 3, 1, 5
+console.log(key);
+console.log(secondKey);
+console.log(secondKey[0]);
+console.log(willThisWork);
